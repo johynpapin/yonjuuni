@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package jp.yonjuuni.srv.sentence;
+
+service SentenceService {
+    rpc InsertSentence(InsertSentenceRequest) returns (InsertSentenceResponse) {}
+}
+
+message InsertSentenceRequest {
+}
+
+message InsertSentenceResponse {
+}
