@@ -18,5 +18,5 @@
 *.iml
 *.iws
 
-# Gopkg
-Gopkg.*
+# dep
+vendor

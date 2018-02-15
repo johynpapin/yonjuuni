@@ -1,16 +1,6 @@
 version: '3.1'
 
 services:
-  sentence-cli:
-    build: ./sentence-cli
-    environment:
-      MICRO_REGISTRY: "mdns"
-
-  user-cli:
-    build: ./user-cli
-    environment:
-      MICRO_REGISTRY: "mdns"
-
   sentence-service:
     build: ./sentence-service
     ports:
@@ -40,6 +30,11 @@ services:
       DB_NAME: "postgres"
     depends_on:
       - database
+
+  user-cli:
+    build: ./user-cli
+    environment:
+      MICRO_REGISTRY: "mdns"
 
   database:
     image: postgres
