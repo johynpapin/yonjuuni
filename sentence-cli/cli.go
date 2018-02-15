@@ -17,13 +17,13 @@ const (
 func main() {
 	cmd.Init()
 
-	client := pb.NewSentenceServiceClient("jp.yonjuuni.srv.sentence", microclient.DefaultClient)
+	client := pb.NewSentenceServiceClient("jp.yonjuuni.srv.user", microclient.DefaultClient)
 
 	insertSentenceRequest := &pb.InsertSentenceRequest{}
 
 	_, err := client.InsertSentence(context.TODO(), insertSentenceRequest)
 	if err != nil {
-		log.Fatalf("could not insert sentence: %v", err)
+		log.Fatalf("could not insert user: %v", err)
 	}
 	log.Printf("inserted")
 }

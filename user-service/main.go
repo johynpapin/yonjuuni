@@ -1,7 +1,7 @@
 package main
 
 import (
-	pb "github.com/johynpapin/yonjuuni/sentence-service/proto/sentence"
+	pb "github.com/johynpapin/yonjuuni/user-service/proto/user"
 	"github.com/micro/go-micro"
 	"fmt"
 	"log"
@@ -15,9 +15,9 @@ func main() {
 	}
 	defer db.Close()
 
-	db.AutoMigrate(Sentence{})
+	db.AutoMigrate(pb.User{})
 
-	repo := &SentenceRepository{db}
+	repo := &UserRepository{db}
 
 	// Create a new service
 	srv := micro.NewService(
@@ -29,7 +29,7 @@ func main() {
 	srv.Init()
 
 	// Register handler
-	pb.RegisterSentenceServiceHandler(srv.Server(), &service{repo})
+	pb.RegisterUserServiceHandler(srv.Server(), &service{repo})
 
 	// Run the server
 	if err := srv.Run(); err != nil {
