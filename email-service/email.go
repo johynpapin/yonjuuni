@@ -5,7 +5,6 @@ import (
 	"html/template"
 	"net/smtp"
 	"os"
-	"log"
 )
 
 type EmailUser struct {
@@ -34,8 +33,6 @@ Sincerely,
 `
 
 func sendMail(data *SmtpTemplateData) error {
-	log.Println(data)
-
 	var doc bytes.Buffer
 
 	t := template.New("emailTemplate")
@@ -44,14 +41,10 @@ func sendMail(data *SmtpTemplateData) error {
 		return err
 	}
 
-	log.Println("pouf")
-
 	err = t.Execute(&doc, data)
 	if err != nil {
 		return err
 	}
-
-	log.Println(doc)
 
 	emailUser := &EmailUser{os.Getenv("EMAIL_USER"), os.Getenv("EMAIL_PASS"), os.Getenv("EMAIL_HOST"), os.Getenv("EMAIL_PORT")}
 
@@ -62,8 +55,6 @@ func sendMail(data *SmtpTemplateData) error {
 		emailUser.Host,
 	)
 
-	log.Println("paf")
-
 	err = smtp.SendMail(emailUser.Host+":"+emailUser.Port,
 		auth,
 		emailUser.User,
@@ -72,8 +63,6 @@ func sendMail(data *SmtpTemplateData) error {
 	if err != nil {
 		return err
 	}
-
-	log.Println("héhé pof")
 
 	return nil
 }
