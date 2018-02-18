@@ -1,13 +1,12 @@
 FROM golang:1.9.0 as builder
 
-WORKDIR $GOPATH/github.com/johynpapin/yonjuuni/user-service
+WORKDIR /go/src/github.com/johynpapin/yonjuuni/user-service
 
 COPY . .
 
-RUN curl https://glide.sh/get | sh
-RUN glide install
+#RUN curl https://glide.sh/get | sh
+#RUN glide install
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo .
-
 
 FROM alpine:latest
 

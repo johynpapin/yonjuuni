@@ -4,8 +4,8 @@ WORKDIR /go/src/github.com/johynpapin/yonjuuni/user-cli
 
 COPY . .
 
-RUN curl https://glide.sh/get | sh
-RUN glide install
+#RUN curl https://glide.sh/get | sh
+#RUN glide install
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo .
 
 FROM alpine:latest

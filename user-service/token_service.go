@@ -16,7 +16,7 @@ type CustomClaims struct {
 }
 
 type Authable interface {
-	Decode(token string) (*CustomClaims, error)
+	Decode(tokenString string) (*CustomClaims, error)
 	Encode(user *pb.User) (string, error)
 }
 

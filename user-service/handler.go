@@ -4,11 +4,14 @@ import (
 	pb "github.com/johynpapin/yonjuuni/user-service/proto/user"
 	"context"
 	"golang.org/x/crypto/bcrypt"
+	"errors"
+	"github.com/micro/go-micro"
 )
 
 type service struct {
 	repo         Repository
 	tokenService Authable
+	publisher     micro.Publisher
 }
 
 func (srv *service) Get(ctx context.Context, req *pb.User, res *pb.Response) error {
@@ -52,10 +55,31 @@ func (srv *service) Create(ctx context.Context, req *pb.User, res *pb.Response) 
 	if err != nil {
 		return err
 	}
+
 	req.Password = string(hashedPass)
 	if err := srv.repo.Create(req); err != nil {
 		return err
 	}
+
 	res.User = req
+	if err := srv.publisher.Publish(ctx, req); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (srv *service) ValidateToken(ctx context.Context, req *pb.Token, res *pb.Token) error {
+	claims, err := srv.tokenService.Decode(req.Token)
+	if err != nil {
+		return err
+	}
+
+	if claims.User.ID == 0 {
+		return errors.New("invalid user")
+	}
+
+	res.Valid = true
+
 	return nil
 }

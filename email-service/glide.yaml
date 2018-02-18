@@ -1,0 +1,15 @@
+package: github.com/johynpapin/yonjuuni/email-service
+import:
+- package: github.com/golang/protobuf
+  subpackages:
+  - proto
+- package: github.com/johynpapin/yonjuuni
+  subpackages:
+  - user-service/proto/user
+- package: github.com/micro/go-micro
+  subpackages:
+  - client
+  - server
+- package: golang.org/x/net
+  subpackages:
+  - context
