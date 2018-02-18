@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package jp.yonjuuni.srv.sentence;
+
+service SentenceService {
+    rpc Create (Sentence) returns (Response) {
+    }
+}
+
+message Sentence {
+
+}
+
+message Request {
+}
+
+message Response {
+    Sentence sentence = 1;
+    repeated Sentence sentences = 2;
+    repeated Error errors = 3;
+}
+
+message Error {
+    int32 code = 1;
+    string description = 2;
+}

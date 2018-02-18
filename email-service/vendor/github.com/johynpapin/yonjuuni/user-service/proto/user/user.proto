@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package jp.yonjuuni.srv.user;
+
+service UserService {
+    rpc Create (User) returns (Response) {
+    }
+    rpc Get (User) returns (Response) {
+    }
+    rpc GetAll (Request) returns (Response) {
+    }
+    rpc Auth (User) returns (Token) {
+    }
+    rpc ValidateToken (Token) returns (Token) {
+    }
+}
+
+message User {
+    uint32 ID = 1;
+    string username = 2;
+    string email = 3;
+    string password = 5;
+}
+
+message Request {
+}
+
+message Response {
+    User user = 1;
+    repeated User users = 2;
+    repeated Error errors = 3;
+}
+
+message Token {
+    string token = 1;
+    bool valid = 2;
+    repeated Error errors = 3;
+}
+
+message Error {
+    int32 code = 1;
+    string description = 2;
+}
