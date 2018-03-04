@@ -1,6 +1,6 @@
 # Yonjuuni (四十二)
 
-Yonjuuni is a web application to learn vocabulary for readers of the KKLC book.
+Yonjuuni is a web application to learn vocabulary for readers of the [KKLC](https://keystojapanese.com/klc/) book.
 
 ## Status
 
