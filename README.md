@@ -2,16 +2,16 @@
 
 Yonjuuni is a web application to learn vocabulary for readers of the KKLC book.
 
-# Status
+## Status
 
 Yonjuuni is currently under development. The website is not usable.
 
-# Structure
+## Structure
 
 The project is organized into micro-services.
 The WEB application uses the Vue framework, and communicates with microservices.
 
-# Installation
+## Installation
 
 If you want to test the actual project, you can follow this little guide:
 
