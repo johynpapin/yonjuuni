@@ -1,8 +1,9 @@
 package main
 
 import (
-	pb "github.com/johynpapin/yonjuuni/user-service/proto/user"
 	"github.com/dgrijalva/jwt-go"
+	pb "github.com/johynpapin/yonjuuni/user-service/proto/user"
+
 	"time"
 )
 

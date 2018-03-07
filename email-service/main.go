@@ -1,8 +1,9 @@
 package main
 
 import (
-	"github.com/micro/go-micro"
 	pb "github.com/johynpapin/yonjuuni/email-service/proto/email"
+	"github.com/micro/go-micro"
+
 	"fmt"
 )
 

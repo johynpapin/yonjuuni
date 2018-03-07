@@ -1,8 +1,8 @@
 package main
 
 import (
-	pb "github.com/johynpapin/yonjuuni/user-service/proto/user"
 	"github.com/jinzhu/gorm"
+	pb "github.com/johynpapin/yonjuuni/user-service/proto/user"
 )
 
 type Repository interface {

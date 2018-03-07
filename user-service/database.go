@@ -1,10 +1,11 @@
 package main
 
 import (
+	"fmt"
+	"os"
+
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/postgres"
-	"os"
-	"fmt"
 )
 
 func CreateConnection() (*gorm.DB, error) {

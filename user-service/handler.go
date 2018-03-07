@@ -1,17 +1,18 @@
 package main
 
 import (
-	pb "github.com/johynpapin/yonjuuni/user-service/proto/user"
 	"context"
-	"golang.org/x/crypto/bcrypt"
 	"errors"
+
+	pb "github.com/johynpapin/yonjuuni/user-service/proto/user"
 	"github.com/micro/go-micro"
+	"golang.org/x/crypto/bcrypt"
 )
 
 type service struct {
 	repo         Repository
 	tokenService Authable
-	publisher     micro.Publisher
+	publisher    micro.Publisher
 }
 
 func (srv *service) Get(ctx context.Context, req *pb.User, res *pb.Response) error {

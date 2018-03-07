@@ -2,8 +2,9 @@ package main
 
 import (
 	"context"
-	pb "github.com/johynpapin/yonjuuni/user-service/proto/user"
 	"log"
+
+	pb "github.com/johynpapin/yonjuuni/user-service/proto/user"
 )
 
 type Service struct {
