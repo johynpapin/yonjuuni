@@ -20,3 +20,6 @@
 
 # dep
 vendor
+
+# secrets
+secrets.env

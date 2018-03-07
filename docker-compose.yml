@@ -36,7 +36,8 @@ services:
     environment:
       MICRO_ADRESS: ":50051"
       MICRO_REGISTRY: "mdns"
-      SENDGRID_API_KEY: "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"
+    env_file:
+      - secrets.env
 
   api-gateway:
       image: microhq/micro
