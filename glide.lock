@@ -1,0 +1,119 @@
+hash: 3ec314f83d130b61fbf01d1d92865b5c37cd9ba4d12d97e540704b43c4b0845b
+updated: 2018-03-07T18:27:10.772683202+01:00
+imports:
+- name: github.com/armon/go-metrics
+  version: 783273d703149aaeb9897cf58613d5af48861c25
+- name: github.com/dgrijalva/jwt-go
+  version: dbeaa9332f19a944acb5736b4456cfcc02140e29
+- name: github.com/go-log/log
+  version: 37e2e1f19306361e1fc152a1839f1236149cb4e4
+  subpackages:
+  - log
+- name: github.com/golang/protobuf
+  version: ab9f9a6dab164b7d1246e0e688b0ab7b94d8553e
+  subpackages:
+  - proto
+- name: github.com/hashicorp/consul
+  version: 257ad520f281250a30e8726f329bc88f172624e3
+  subpackages:
+  - api
+  - watch
+- name: github.com/hashicorp/go-cleanhttp
+  version: d5fe4b57a186c716b0e00b8c301cbd9b4182694d
+- name: github.com/hashicorp/go-immutable-radix
+  version: 7f3cd4390caab3250a57f30efdb2a65dd7649ecf
+- name: github.com/hashicorp/go-rootcerts
+  version: 6bb64b370b90e7ef1fa532be9e591a81c3493e00
+- name: github.com/hashicorp/golang-lru
+  version: 0fb14efe8c47ae851c0034ed7a448854d3d34cf3
+  subpackages:
+  - simplelru
+- name: github.com/hashicorp/serf
+  version: 3b250ce4404edb266330f53fcfc8ad0d0dacfae7
+  subpackages:
+  - coordinate
+- name: github.com/jinzhu/gorm
+  version: 6ed508ec6a4ecb3531899a69cbc746ccf65a4166
+  subpackages:
+  - dialects/postgres
+- name: github.com/jinzhu/inflection
+  version: 1c35d901db3da928c72a72d8458480cc9ade058f
+- name: github.com/lib/pq
+  version: 88edab0803230a3898347e77b474f8c1820a1f20
+  subpackages:
+  - hstore
+  - oid
+- name: github.com/micro/cli
+  version: 3d2263bb092286dde294a31049c92665f8373820
+- name: github.com/micro/go-log
+  version: cbfa9447f9b655f8e66583237e51f40ca9bff860
+- name: github.com/micro/go-micro
+  version: 6246fa2bcb781619ab295df972a65f092124a8df
+  subpackages:
+  - broker
+  - broker/codec
+  - broker/codec/json
+  - broker/http
+  - client
+  - cmd
+  - codec
+  - codec/jsonrpc
+  - codec/protorpc
+  - errors
+  - metadata
+  - registry
+  - registry/consul
+  - registry/mdns
+  - selector
+  - selector/cache
+  - server
+  - server/debug
+  - server/debug/proto
+  - transport
+  - transport/codec
+  - transport/http
+- name: github.com/micro/go-rcache
+  version: c4d553f1c37857cdc6d5385e83b6946deed488e4
+- name: github.com/micro/mdns
+  version: cdf30746f9f70dc7a366d3d885792a092fd83102
+- name: github.com/micro/misc
+  version: 7c73dd51fc3d72219cd448163ebf27ed856fe262
+  subpackages:
+  - lib/addr
+  - lib/net
+  - lib/tls
+- name: github.com/miekg/dns
+  version: 946bd9fbed05568b0f3cd188353d8aa28f38b688
+  subpackages:
+  - internal/socket
+- name: github.com/mitchellh/go-homedir
+  version: b8bc1bf767474819792c23f32d8286a45736f1c6
+- name: github.com/mitchellh/hashstructure
+  version: 2bca23e0e452137f789efbc8610126fd8b94f73b
+- name: github.com/mitchellh/mapstructure
+  version: 00c29f56e2386353d58c599509e8dc3801b0d716
+- name: github.com/pborman/uuid
+  version: c65b2f87fee37d1c7854c9164a450713c28d50cd
+- name: github.com/pkg/errors
+  version: 30136e27e2ac8d167177e8a583aa4c3fea5be833
+- name: github.com/sendgrid/rest
+  version: a44614977dc1c40d4c7cb62caeb3bd145e974e7d
+- name: github.com/sendgrid/sendgrid-go
+  version: 588320a743278a1824a54d232a7e9f36df6f6c99
+  subpackages:
+  - helpers/mail
+- name: golang.org/x/crypto
+  version: 9419663f5a44be8b34ca85f08abc5fe1be11f8a3
+  subpackages:
+  - bcrypt
+  - blowfish
+- name: golang.org/x/net
+  version: 66aacef3dd8a676686c7ae3716979581e8b03c47
+  subpackages:
+  - bpf
+  - context
+  - internal/iana
+  - internal/socket
+  - ipv4
+  - ipv6
+testImports: []

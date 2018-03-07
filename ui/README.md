@@ -1,6 +1,6 @@
 # yonjuuni
 
-> A Vue.js project
+> A web application to learn vocabulary for readers of the KKLC book.
 
 ## Build Setup
 

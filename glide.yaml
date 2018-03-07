@@ -1,0 +1,22 @@
+package: github.com/johynpapin/yonjuuni
+import:
+- package: github.com/dgrijalva/jwt-go
+- package: github.com/golang/protobuf
+  subpackages:
+  - proto
+- package: github.com/jinzhu/gorm
+  subpackages:
+  - dialects/postgres
+- package: github.com/micro/go-micro
+  subpackages:
+  - client
+  - server
+- package: github.com/sendgrid/sendgrid-go
+  subpackages:
+  - helpers/mail
+- package: golang.org/x/crypto
+  subpackages:
+  - bcrypt
+- package: golang.org/x/net
+  subpackages:
+  - context
